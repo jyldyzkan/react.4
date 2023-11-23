@@ -24,7 +24,7 @@ code {
 .row{
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -50px;
+  margin: 0 -15px;
 }
 
 .col-4{
@@ -51,10 +51,7 @@ button:hover{
   background: rgba(255, 215, 0, 0.54);
   transition: 0.5s;
 }
-.box:hover{
-  background: rgba(218, 190, 38, 0.54);
-  transition: 0.4s;
-}
+
 .card {
   gap: 20px;
 }
@@ -98,15 +95,13 @@ body {
   width: 41.67%;
   padding: 15px;
 }
-.col-6{
-  width: 50%;
-  padding: 15px;
-}
 .inner{
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center ;
+  border: 2px solid bisque;
 }
 h5{
   font-size: 25px;

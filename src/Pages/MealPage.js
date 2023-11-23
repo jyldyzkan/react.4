@@ -5,15 +5,15 @@ import IngredientList from "../Components/IngredientList"
 
 
 const MealPage = () => {
-   const {idMeal} = useParams()
+    const {idMeal} = useParams()
     const [meal, setMeal] = useState({})
     const [ingredients,  setIngredients ] = useState([])
 
     const filterIngredients = () => {
-       for (const  key in meal) {
-           if (key.startsWith("strIngredient") && meal[key] !== null && meal[key] !== ""){
-               setIngredients(prev => [...prev, meal[key]])
-           }
+        for (const  key in meal) {
+            if (key.startsWith("strIngredient") && meal[key] !== null && meal[key] !== ""){
+                setIngredients(prev => [...prev, meal[key]])
+            }
         }
     }
 
@@ -25,34 +25,34 @@ const MealPage = () => {
             })
     }, []);
 
-   return (
+    return (
 
-       <>
-           <div className="container">
-               <div className="row">
-                   <div className="col-5">
-                       <div className="box">
-                           <h2>{meal.strMeal}</h2>
-                           <img src={meal.strMealThumb}    alt=""/>
-                           <iframe src={
-                               `https://www.youtube.com/embed/${meal
-                                   .strYoutube?.slice(meal.strYoutube
-                                       .indexOf('=') +1 )}`
-                           }
-                                   frameborder="0">
-                           </iframe>
-                       </div>
-                   </div>
-                   <div className="col-7">
-                       <div className="box">
-                           <h2>Ingredients</h2>
-                           <IngredientList ingredients={ingredients} />
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </>
+        <>
+            <div className="container">
+                <div className="row">
+                    <div className="col-5">
+                        <div className="box">
+                            <h2>{meal.strMeal}</h2>
+                            <img src={meal.strMealThumb}    alt=""/>
+                            <iframe src={
+                                `https://www.youtube.com/embed/${meal
+                                    .strYoutube?.slice(meal.strYoutube
+                                        .indexOf('=') +1 )}`
+                            }
+                                    frameborder="0">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div className="col-7">
+                        <div className="box">
+                            <h2>Ingredients</h2>
+                            <IngredientList ingredients={ingredients} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
 
-   )
+    )
 }
 export default MealPage
