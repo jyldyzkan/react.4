@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Header from "../Components/Header";
 import axios from "axios";
 import MealList from "../Components/MealList";
 
@@ -15,10 +14,10 @@ const HomePage = () => {
 
     return (
     <>
-    <Header/>
         <div className={'container'}>
             <h1>Home page</h1>
             <MealList meals={meals} />
+
         </div>
     </>
 );

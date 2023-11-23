@@ -18,8 +18,6 @@ const handleSearch = () => {
 
     return (
     <div>
-      <Header/>
-
        <div className={'container'}>
            <h1>SearchPages</h1>
            <input type="text" placeholder={'Введите текс'}
