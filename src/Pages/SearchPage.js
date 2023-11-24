@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Header from "../Components/Header";
 
 import axios from "axios";
 import MealList from "../Components/MealList";
@@ -12,15 +11,14 @@ const SearchPage = () => {
 const handleSearch = () => {
     axios(`https://www.themealdb.com/api/json/v2/1/search.php?s=${value}`)
         .then (({data}) =>
-        { console.log (data.meals, 'meals')
-            setMeals(data.meals)
+        {(data.meals) = setMeals(data.meals)
 })}
 
     return (
     <div>
        <div className={'container'}>
            <h1>SearchPages</h1>
-           <input type="text" placeholder={'Введите текс'}
+           <input type="text" placeholder={'Введите текст'}
              onChange={event => setValue(event.target.value)}
            />
            <button onClick={ handleSearch}>click</button>

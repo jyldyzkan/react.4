@@ -31,8 +31,13 @@ code {
   max-width: 33.333%;
   padding: 15px;
 }
+.col-3{
+  width: 25%;
+  padding: 15px;
+}
 img{
   width: 100%;
+  border-radius: 30%;
 }
 
 input , button {
@@ -104,5 +109,11 @@ body {
   border: 2px solid bisque;
 }
 h5{
-  font-size: 25px;
+  font-size: 15px;
+}
+.border{
+  width: 200px;
+}
+.img-box{
+  width: 250px;
 }

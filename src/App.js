@@ -5,6 +5,7 @@ import HomePage from "./Pages/HomePage"
 import SearchPage from "./Pages/SearchPage"
 import Header from "./Components/Header";
 import MealPage from "./Pages/MealPage";
+import IngredientPage from "./Pages/IngredientPage";
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
              <Route path="/" element={<HomePage/>} />
              <Route path="/search" element={<SearchPage/>} />
              <Route path="/meal/:idMeal" element={<MealPage/>} />
+             <Route path="/ingredient/:name" element={<IngredientPage/>} />
          </Routes>
      </>
   )
